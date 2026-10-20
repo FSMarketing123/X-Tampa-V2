@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════════════════════
+   CAPITAL MARKETS LAYER — additions on top of the Leasing design
+   (placeholders, round headshots, text marquees, client logos panel,
+   transactions grid, marketing images)
+══════════════════════════════════════════════════════ */
+
+/* Placeholders: anything still to add. QC counts these; remove the span once filled. */
+.todo{display:inline-block;border:1px dashed #c99400;background:rgba(255,196,0,.14);color:#7a5600;padding:1px 8px;margin:2px 0;
+  font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;font-style:normal;letter-spacing:.02em;text-transform:none;line-height:1.5;border-radius:2px;vertical-align:middle;}
+#process .todo,#timeline .todo,#market .todo,#cta .todo,#hero .todo{color:#ffd76a;border-color:#ffd76a;background:rgba(255,215,106,.1);}
+#draft-badge{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9000;background:#ffd76a;color:#3a2a00;
+  font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.06em;padding:8px 14px;border-radius:2px;box-shadow:0 6px 18px rgba(0,0,0,.18);}
+
+/* Hero stat card tags */
+.hsc-tag{font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.15);color:#fff;padding:3px 10px;}
+
+/* Advantage: four principles */
+.adv-points{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin-bottom:8px;}
+.adv-points div{font-size:13px;line-height:1.6;color:rgba(0,51,73,.65);}
+.adv-points b{display:block;color:var(--navy);font-size:13px;margin-bottom:2px;}
+.video-note{margin-top:12px;}
+@media(max-width:600px){.adv-points{grid-template-columns:1fr;}}
+
+/* National Reach note under stats */
+.res-note{font-size:12px;color:rgba(0,51,73,.55);margin-top:18px;}
+
+/* Team: round headshots, 6 people in two rows */
+#team .team-cards{row-gap:56px;}
+#team .tc-photo{border-radius:50%;width:260px;height:260px;}
+#team .tc-role{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#3281a7;font-weight:700;}
+.awards-strip-img{display:block;margin:40px auto 0;max-width:min(860px,100%);height:auto;border-radius:2px;}
+#cta .cc-photo img{object-position:center;}
+
+/* Marquees with text instead of logos */
+.lm-chip.txt{width:auto;min-width:200px;height:84px;padding:0 28px;font-family:'Libre Baskerville',Georgia,serif;font-size:18px;color:var(--navy);text-align:center;white-space:nowrap;}
+
+/* Client logos panel in place of the map */
+#market .map-wrap.logos{aspect-ratio:860/1120;background:#fff;border-color:rgba(0,147,157,.35);}
+#market .map-wrap.logos .map-aerial{filter:none;object-fit:contain;padding:18px;transform:none !important;scale:none !important;translate:none !important;} /* no scroll zoom on the logo panel */
+#market .map-wrap.logos .map-caption{color:var(--navy);text-shadow:none;font-weight:700;}
+#market .map-wrap.logos .map-radar,#market .map-wrap.logos .map-rings{display:none;}
+
+/* Marketing platform images */
+.plat-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;}
+
+/* All notable transactions grid */
+.tx-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:72px 0 24px;padding-top:28px;border-top:1px solid rgba(0,51,73,.12);}
+.tx-title{font-family:'Libre Baskerville',serif;font-weight:400;font-size:clamp(24px,2.4vw,32px);color:var(--navy);}
+.tx-sum{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);}
+.tx-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.tx-card{background:#fff;box-shadow:0 4px 24px rgba(0,51,73,.07);display:flex;flex-direction:column;min-width:0;}
+.tx-img{aspect-ratio:3/2;overflow:hidden;background:var(--cream);}
+.tx-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease);}
+.tx-card:hover .tx-img img{transform:scale(1.05);}
+.tx-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;}
+.tx-name{font-family:'Libre Baskerville',serif;font-size:16px;line-height:1.25;color:var(--navy);}
+.tx-addr{font-size:12px;line-height:1.5;color:rgba(0,51,73,.6);}
+.tx-nums{display:flex;justify-content:space-between;gap:8px;margin-top:4px;padding-top:8px;border-top:1px solid rgba(0,51,73,.1);
+  font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--teal);font-variant-numeric:tabular-nums;}
+@media(max-width:1100px){.tx-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:800px){.tx-grid{grid-template-columns:repeat(2,minmax(0,1fr));}#team .tc-photo{width:220px;height:220px;}}
+@media(max-width:480px){.tx-grid{grid-template-columns:1fr;}}
+#process .pp-right .todo{color:#7a5600;border-color:#c99400;background:rgba(255,196,0,.14);} /* white card inside a dark section */
