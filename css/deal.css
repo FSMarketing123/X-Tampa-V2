@@ -655,3 +655,6 @@ details.more>summary,.cmp-s,.lm-chip.txt{font-size:12px !important;}
 .mtc-in{position:absolute;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#fff;text-align:center;white-space:nowrap;opacity:0;transition:opacity .5s ease 1.3s;}
 .mtc.in .mtc-in{opacity:1;}
 .mtc-legend .lg-court{width:22px;height:10px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.7) 0 3px,rgba(255,255,255,.15) 3px 6px);}
+
+/* V2 banner: landscape site aerial */
+#hero .hero-map-bg{background-image:url("../assets/img/backgrounds/hero-site-aerial.jpg") !important;background-size:cover !important;background-position:50% 62% !important;}
